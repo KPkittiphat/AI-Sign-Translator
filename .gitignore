@@ -1,0 +1,15 @@
+# Angular
+sign-language-app/node_modules/
+sign-language-app/.angular/
+sign-language-app/dist/
+
+# Python
+__pycache__/
+*.pyc
+.env
+venv/
+env/
+
+# OS Files
+.DS_Store
+Thumbs.db

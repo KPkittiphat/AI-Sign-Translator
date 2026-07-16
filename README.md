@@ -1,1 +1,0 @@
-# AI-Sign-Translator

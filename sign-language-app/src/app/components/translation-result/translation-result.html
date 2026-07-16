@@ -1,0 +1,23 @@
+<div class="w-full max-w-4xl mx-auto mt-8">
+  <div class="relative overflow-hidden rounded-2xl bg-gray-800/60 backdrop-blur-lg border border-gray-700 shadow-2xl p-6 md:p-10 flex flex-col items-center justify-center text-center">
+    
+    <!-- Animated background gradient -->
+    <div class="absolute inset-0 bg-gradient-to-r from-brand-teal/10 via-brand-purple/10 to-brand-teal/10 opacity-50 blur-xl"></div>
+
+    <p class="text-sm md:text-base text-gray-400 font-medium mb-2 uppercase tracking-widest relative z-10">คำแปลภาษามือ</p>
+    
+    <!-- Translation Word -->
+    <div class="relative z-10 h-24 flex items-center justify-center">
+      <!-- Default state (waiting) -->
+      <h2 *ngIf="!signLanguageService.currentWord()" class="text-4xl md:text-6xl font-display font-bold text-gray-500 animate-pulse" id="waiting-text">
+        รอจับภาพมือ...
+      </h2>
+      
+      <!-- Result state -->
+      <h2 *ngIf="signLanguageService.currentWord()" class="text-5xl md:text-7xl font-display font-bold text-transparent bg-clip-text bg-gradient-to-r from-brand-teal to-brand-purple drop-shadow-[0_0_10px_rgba(79,172,254,0.8)]">
+        {{ signLanguageService.currentWord() }}
+      </h2>
+    </div>
+    
+  </div>
+</div>
